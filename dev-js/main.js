@@ -5,6 +5,10 @@ var app = new Vue({
         link:"https://google.com",
     },
     methods:{
-        changeTitle: function (e){ this.user = e.target.value}
+        changeTitle: function (e){ this.user = das()}
     }
 });
+
+let das = () => {
+    return "hello world"
+}

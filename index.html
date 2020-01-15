@@ -11,9 +11,14 @@
 <body>
     <div id="app">
         <input v-on:input = "changeTitle">
-        <a v-bind:href="link" >Google</a>
+        <a v-bind:href="link" >Google {{ title }}</a>
         <h3 v-once>{{ user }}</h3>
         <p >{{user}}</p>
+        <h4 v-show="open > 122">Hi there</h4>
+        <!-- <h4 v-else="open">Hi trtr there</h4> -->
+        <div v-for="color in colors">
+                    {{ color }}
+        </div>
         
     </div>
     

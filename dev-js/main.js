@@ -4,7 +4,21 @@ var app = new Vue({
         user: "Ihor",
         link:"https://google.com",
         open: 10,
-        colors:['green', 'red', 'blue']
+        colors:[
+            {
+                id:234,
+                color:"green"
+            },
+            {
+                id:235,
+                color:"red"
+            },
+            {
+                id:236,
+                color:"grey"
+
+            }
+        ]
     },
     computed:{
         title : function() {
@@ -12,7 +26,8 @@ var app = new Vue({
         }
     },
     methods:{
-        changeTitle: function (e){ this.open = e.target.value}
+        changeTitle: function (e){ this.open = e.target.value},
+        showColor(color){this.open = color; }
         
     }
 });

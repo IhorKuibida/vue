@@ -16,8 +16,9 @@
         <p >{{user}}</p>
         <h4 v-show="open > 122">Hi there</h4>
         <!-- <h4 v-else="open">Hi trtr there</h4> -->
-        <div v-for="color in colors">
-                    {{ color }}
+        <div v-for="color in colors" v-key="color.id" @mouseOver="showColor(color.color)">
+           
+                    {{ color.color }}
         </div>
         
     </div>
